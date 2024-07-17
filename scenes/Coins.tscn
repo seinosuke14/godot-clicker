@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6j8n1pynap7d"]
+
+[ext_resource type="Script" path="res://scripts/click.gd" id="1_q2e4x"]
+[ext_resource type="Texture2D" uid="uid://cafpbl1ee0dov" path="res://Sprites/Enemies/Skull/Red Particle.png" id="2_tcvtk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_soapm"]
+radius = 21.095
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_q2e4x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("2_tcvtk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_soapm")
