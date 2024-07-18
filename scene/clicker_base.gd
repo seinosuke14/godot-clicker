@@ -30,3 +30,6 @@ func _on_mejora_2_pressed():
 	clickPerSecond += 5
 	$LabelClick.text = str(click)
 	$LabelClickPerSecon.text = str(clickPerSecond) + " /s"
+
+
+
