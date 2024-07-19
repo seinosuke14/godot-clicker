@@ -1,25 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnjbs1wmik27m"]
+[gd_scene load_steps=3 format=3 uid="uid://l1bfiqj3fbyq"]
 
-[ext_resource type="Texture2D" path="res://Sprites/bg.png" id="1_he5eq"]
-[ext_resource type="Script" path="res://scene/clicker_base.gd" id="1_lwccy"]
-[ext_resource type="Texture2D" uid="uid://k48oh454r5lw" path="res://Sprites/Enemies/Rocks/Rock1_Hit.png" id="2_hd5vf"]
-[ext_resource type="Texture2D" path="res://Sprites/topBar.png" id="2_twp4e"]
-[ext_resource type="Texture2D" uid="uid://beasob3dm742y" path="res://Sprites/Enemies/Rocks/Rock2_Hit (32x28).png" id="3_pfttk"]
+[ext_resource type="Texture2D" uid="uid://k48oh454r5lw" path="res://Sprites/Enemies/Rocks/Rock1_Hit.png" id="1_fqhuf"]
+[ext_resource type="Texture2D" uid="uid://beasob3dm742y" path="res://Sprites/Enemies/Rocks/Rock2_Hit (32x28).png" id="2_rjiak"]
 
 [node name="ClickerBase" type="Node"]
-script = ExtResource("1_lwccy")
 
 [node name="UI" type="CanvasLayer" parent="."]
 layer = -5
 
 [node name="BG" type="Sprite2D" parent="UI"]
 position = Vector2(577, 324)
-texture = ExtResource("1_he5eq")
 
 [node name="Sprite2D" type="Sprite2D" parent="UI"]
 position = Vector2(578, 491)
 scale = Vector2(-2.41248, 1.23825)
-texture = ExtResource("2_twp4e")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 365.0
@@ -29,8 +23,8 @@ offset_bottom = 224.0
 scale = Vector2(5.19115, 5.19207)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("2_hd5vf")
-texture_pressed = ExtResource("3_pfttk")
+texture_normal = ExtResource("1_fqhuf")
+texture_pressed = ExtResource("2_rjiak")
 ignore_texture_size = true
 stretch_mode = 0
 

@@ -75,4 +75,5 @@ text = "Mejora 2
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Mejora 1" to="." method="_on_mejora_1_pressed"]
+[connection signal="visibility_changed" from="Mejora 1" to="." method="_on_mejora_1_visibility_changed"]
 [connection signal="pressed" from="Mejora 2" to="." method="_on_mejora_2_pressed"]
