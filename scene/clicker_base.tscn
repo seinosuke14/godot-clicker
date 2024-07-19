@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnjbs1wmik27m"]
 
-[ext_resource type="Texture2D" path="res://Sprites/bg.png" id="1_he5eq"]
+[ext_resource type="Texture2D" uid="uid://b6r67gfgywr1k" path="res://Sprites/bg.png" id="1_he5eq"]
 [ext_resource type="Script" path="res://scene/clicker_base.gd" id="1_lwccy"]
 [ext_resource type="Texture2D" uid="uid://k48oh454r5lw" path="res://Sprites/Enemies/Rocks/Rock1_Hit.png" id="2_hd5vf"]
-[ext_resource type="Texture2D" path="res://Sprites/topBar.png" id="2_twp4e"]
+[ext_resource type="Texture2D" uid="uid://b8v8axartqq64" path="res://Sprites/topBar.png" id="2_twp4e"]
 [ext_resource type="Texture2D" uid="uid://beasob3dm742y" path="res://Sprites/Enemies/Rocks/Rock2_Hit (32x28).png" id="3_pfttk"]
 
 [node name="ClickerBase" type="Node"]
@@ -71,6 +71,22 @@ offset_right = 934.0
 offset_bottom = 42.0
 text = "Mejora 2
 "
+
+[node name="Cost" type="Label" parent="."]
+offset_left = 732.0
+offset_top = 41.0
+offset_right = 843.0
+offset_bottom = 72.0
+text = "(costo Mejora)"
+horizontal_alignment = 1
+
+[node name="Cost2" type="Label" parent="."]
+offset_left = 853.0
+offset_top = 43.0
+offset_right = 964.0
+offset_bottom = 74.0
+text = "(costo mejora)"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
