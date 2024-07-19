@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnjbs1wmik27m"]
+[gd_scene load_steps=6 format=3 uid="uid://cnjbs1wmik27m"]
 
 [ext_resource type="Texture2D" uid="uid://b6r67gfgywr1k" path="res://Sprites/bg.png" id="1_he5eq"]
 [ext_resource type="Script" path="res://scene/clicker_base.gd" id="1_lwccy"]
 [ext_resource type="Texture2D" uid="uid://k48oh454r5lw" path="res://Sprites/Enemies/Rocks/Rock1_Hit.png" id="2_hd5vf"]
 [ext_resource type="Texture2D" uid="uid://b8v8axartqq64" path="res://Sprites/topBar.png" id="2_twp4e"]
 [ext_resource type="Texture2D" uid="uid://beasob3dm742y" path="res://Sprites/Enemies/Rocks/Rock2_Hit (32x28).png" id="3_pfttk"]
-[ext_resource type="Texture2D" uid="uid://dk5h7rtywk7b0" path="res://Sprites/Enemies/Duck/Fall (36x36).png" id="6_dkelm"]
 
 [node name="ClickerBase" type="Node"]
 script = ExtResource("1_lwccy")
@@ -18,7 +17,7 @@ position = Vector2(577, 324)
 texture = ExtResource("1_he5eq")
 
 [node name="Sprite2D" type="Sprite2D" parent="UI"]
-position = Vector2(577, 491)
+position = Vector2(578, 491)
 scale = Vector2(-2.41248, 1.23825)
 texture = ExtResource("2_twp4e")
 
@@ -89,26 +88,7 @@ offset_bottom = 74.0
 text = "(costo mejora)"
 horizontal_alignment = 1
 
-[node name="Mejora_X_Click" type="Button" parent="."]
-offset_left = 913.0
-offset_top = 253.0
-offset_right = 957.0
-offset_bottom = 297.0
-text = "Mejora  +1 x click
-"
-icon = ExtResource("6_dkelm")
-
-[node name="CostXclick" type="Label" parent="."]
-offset_left = 937.0
-offset_top = 302.0
-offset_right = 1036.0
-offset_bottom = 325.0
-text = "(costo)"
-horizontal_alignment = 1
-justification_flags = 162
-
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Mejora 1" to="." method="_on_mejora_1_pressed"]
 [connection signal="pressed" from="Mejora 2" to="." method="_on_mejora_2_pressed"]
-[connection signal="pressed" from="Mejora_X_Click" to="." method="_on_mejora_x_click_pressed"]
