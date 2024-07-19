@@ -7,6 +7,9 @@ var click = 0
 var clickPerSecond = 0
 var costMejora1 = 15
 var costMejora2 = 30
+var costClickMejora = 50
+var clickMejorado = 1
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +17,7 @@ func _ready():
 	$LabelClickPerSecon.text = str(clickPerSecond) + " /s"
 	$Cost.text = str(costMejora1)
 	$Cost2.text = str(costMejora2)
+	$CostXclick.text = "Costo de Mejora: " + str(costClickMejora)
 	$"Mejora 1".visible = false
 	$"Mejora 2".visible = false
 	$Cost.visible = false
@@ -21,6 +25,7 @@ func _ready():
 
 	$"Mejora 1".disabled = true
 	$"Mejora 2".disabled = true
+	$Mejora_X_Click.disabled = true
 	#aqui se realiza la coneccion con la señal, mediante el "callable" o llamado al metodo y update_mejora_buttons
 	# es la func llamada
 	connect("click_updated",Callable(self, "_update_mejora_buttons"))
@@ -28,7 +33,10 @@ func _ready():
 
 
 func _on_texture_button_pressed():
-	click += 1
+	if clickMejorado <= 0:
+		click += 1
+	else:
+		click = click + clickMejorado
 	click = int(click)
 	$LabelClick.text = str(click)
 	emit_signal("click_updated")
@@ -48,6 +56,7 @@ func _update_mejora_buttons():
 	_MejoraVisibility2()
 	_MejoraDisabled1()
 	_MejoraDisabled2()
+	_MejoraxClickDisabled()
 
 ##-------- INICIO MEJORA 1 --------
 func _MejoraVisility1():
@@ -97,4 +106,22 @@ func _on_mejora_2_pressed():
 	emit_signal("click_updated")
 ##------ FIN MEJORA 2 --------
 
+#----------Mejora x Click ------------
+
+
+func _MejoraxClickDisabled():
+	if click >= costClickMejora:
+		$Mejora_X_Click.disabled = false
+	else:
+		$Mejora_X_Click.disabled = true
+
+func _on_mejora_x_click_pressed():
+	if click >= costClickMejora:
+		clickMejorado += 1
+		click = click - costClickMejora
+		costClickMejora = int(costClickMejora * 1.8)
+		$LabelClick.text = str(click)
+		$CostXclick.text = "Costo de Mejora: " + str(costClickMejora)
+		emit_signal("click_updated")
+		
 
