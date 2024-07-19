@@ -9,34 +9,24 @@ var costMejora2 = 30
 func _ready():
 	$LabelClick.text = str(click)
 	$LabelClickPerSecon.text = str(clickPerSecond) + " /s"
-<<<<<<< Updated upstream
-=======
 	$"Mejora 1".visible = false
 	$"Mejora 2".visible = false
 	$"Mejora 1".disabled = true
 	$"Mejora 2".disabled = true
 
->>>>>>> Stashed changes
 
 func _on_texture_button_pressed():
 	click += 1
 	$LabelClick.text = str(click)
-<<<<<<< Updated upstream
-=======
 	_MejoraVisility1()
 	_MejoraVisibility2()
 	_MejoraDisabled1()	
 	_MejoraDisabled2()
->>>>>>> Stashed changes
-	
+
 
 func _on_timer_timeout():
 	click += clickPerSecond
 	$LabelClick.text = str(click)
-<<<<<<< Updated upstream
-
-=======
-	
 ##-------- INICIO MEJORA 1 --------
 func _MejoraVisility1():
 	if click >= 10:
@@ -45,7 +35,6 @@ func _MejoraVisility1():
 func _MejoraDisabled1():
 	if click >= costMejora1:
 		$"Mejora 1".disabled = false
->>>>>>> Stashed changes
 
 func _on_mejora_1_pressed():
 	clickPerSecond += 3
@@ -72,13 +61,7 @@ func _on_mejora_2_pressed():
 	costMejora2 = costMejora2 * 1.6
 	$LabelClick.text = str(click)
 	$LabelClickPerSecon.text = str(clickPerSecond) + " /s"
-<<<<<<< Updated upstream
-=======
 	if click < costMejora2:
 		$"Mejora 2".disabled = true
 ##------ FIN MEJORA 2 --------
 
-
-
-
->>>>>>> Stashed changes
