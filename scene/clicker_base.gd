@@ -4,7 +4,7 @@ extends Node
 signal click_updated
 
 var click = 0
-var clickPerSecond = 0
+var clickPerSecond: float = 0
 var costMejora1 = 15
 var costMejora2 = 30
 var costClickMejora = 50
@@ -22,6 +22,7 @@ func _ready():
 	$"Mejora 2".visible = false
 	$Cost.visible = false
 	$Cost2.visible = false
+	
 
 	$"Mejora 1".disabled = true
 	$"Mejora 2".disabled = true
