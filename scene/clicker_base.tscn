@@ -53,18 +53,18 @@ horizontal_alignment = 1
 justification_flags = 162
 
 [node name="Mejora 1" type="Button" parent="."]
-offset_left = 64.0
-offset_top = 906.0
-offset_right = 140.0
-offset_bottom = 937.0
-text = "Mejora 1"
+offset_left = 71.0
+offset_top = 905.0
+offset_right = 148.0
+offset_bottom = 936.0
+text = "Herreros"
 
 [node name="Mejora 2" type="Button" parent="."]
-offset_left = 65.0
+offset_left = 62.0
 offset_top = 976.0
-offset_right = 141.0
+offset_right = 177.0
 offset_bottom = 1007.0
-text = "Mejora 2
+text = "Mejora Herreria
 "
 
 [node name="Cost" type="Label" parent="."]
@@ -101,6 +101,22 @@ texture_normal = ExtResource("25_lh6x2")
 texture_pressed = ExtResource("26_uv08g")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Lvl_Cost_Mejora" type="Label" parent="."]
+offset_left = 151.0
+offset_top = 911.0
+offset_right = 216.0
+offset_bottom = 934.0
+text = "LvlCost1
+"
+
+[node name="Lvl_Cost_Mejora2" type="Label" parent="."]
+offset_left = 200.0
+offset_top = 983.0
+offset_right = 265.0
+offset_bottom = 1006.0
+text = "LvlCost1
+"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Mejora_X_Click" to="." method="_on_mejora_x_click_pressed"]
