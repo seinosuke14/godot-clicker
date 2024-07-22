@@ -11,8 +11,8 @@ var costClickMejora = 50
 var clickMejorado = 1
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
+# Called when the node enters the scene tree for the first time.
 	$LabelClick.text = str(click)
 	$LabelClickPerSecon.text = str(clickPerSecond) + " /s"
 	$Cost.text = str(costMejora1)
@@ -22,8 +22,6 @@ func _ready():
 	$"Mejora 2".visible = false
 	$Cost.visible = false
 	$Cost2.visible = false
-	
-
 	$"Mejora 1".disabled = true
 	$"Mejora 2".disabled = true
 	$Mejora_X_Click.disabled = true
@@ -31,7 +29,6 @@ func _ready():
 	# es la func llamada
 	connect("click_updated",Callable(self, "_update_mejora_buttons"))
 	
-
 
 func _on_texture_button_pressed():
 	if clickMejorado <= 0:
@@ -71,8 +68,6 @@ func _MejoraDisabled1():
 	else:
 		$"Mejora 1".disabled = true
 
-
-
 func _on_mejora_1_pressed():
 	clickPerSecond += 3
 	click = click - costMejora1
@@ -108,8 +103,6 @@ func _on_mejora_2_pressed():
 ##------ FIN MEJORA 2 --------
 
 #----------Mejora x Click ------------
-
-
 func _MejoraxClickDisabled():
 	if click >= costClickMejora:
 		$Mejora_X_Click.disabled = false
@@ -124,5 +117,4 @@ func _on_mejora_x_click_pressed():
 		$LabelClick.text = str(click)
 		$CostXclick.text = "Costo de Mejora: " + str(costClickMejora)
 		emit_signal("click_updated")
-		
 

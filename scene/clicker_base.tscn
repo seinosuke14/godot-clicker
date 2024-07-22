@@ -1,294 +1,18 @@
-[gd_scene load_steps=27 format=3 uid="uid://cnjbs1wmik27m"]
+[gd_scene load_steps=6 format=3 uid="uid://cnjbs1wmik27m"]
 
 [ext_resource type="Script" path="res://scene/clicker_base.gd" id="1_lwccy"]
-[ext_resource type="Texture2D" uid="uid://br40g3e713oec" path="res://Sprites/Background_01.png" id="2_0lbh7"]
-[ext_resource type="Texture2D" uid="uid://bqf075akixdiv" path="res://Sprites/Building/Chimney_02.png" id="3_5jn5s"]
-[ext_resource type="Texture2D" uid="uid://bwy7a23rgtsd3" path="res://Sprites/Building/Chimney_01.png" id="4_7wagb"]
-[ext_resource type="Texture2D" uid="uid://cqbedi70ejhjg" path="res://Sprites/Plataformer/Ground_02.png" id="4_ea53k"]
-[ext_resource type="Texture2D" uid="uid://dk5h7rtywk7b0" path="res://Sprites/Enemies/Duck/Fall (36x36).png" id="6_dkelm"]
-[ext_resource type="Texture2D" uid="uid://d0e4llt8e8n6b" path="res://Sprites/Plataformer/Ground_06.png" id="8_bwnr8"]
-[ext_resource type="Texture2D" uid="uid://coph6i1bsx0m6" path="res://Sprites/Enviroment/Rock_02.png" id="9_vaa1s"]
-[ext_resource type="Texture2D" uid="uid://b87covepm2fpl" path="res://Sprites/Enviroment/Rock_04.png" id="10_ubac2"]
-[ext_resource type="Texture2D" uid="uid://xpcd3pa6tl2j" path="res://Sprites/Enviroment/Rock_06.png" id="11_her0y"]
-[ext_resource type="Texture2D" uid="uid://bgswgulmf00op" path="res://Sprites/Enviroment/Rock_08.png" id="12_ojpmn"]
-[ext_resource type="Texture2D" uid="uid://chdfjpkvof70d" path="res://Sprites/Enviroment/Rock_01.png" id="13_rmkro"]
-[ext_resource type="Texture2D" uid="uid://fxm2t1gijm63" path="res://Sprites/Building/Chimney_04.png" id="16_o1um5"]
-[ext_resource type="Texture2D" uid="uid://bkvx6j78cu685" path="res://Sprites/Building/Wall_B_02.png" id="17_n8b6p"]
-[ext_resource type="Texture2D" uid="uid://0t87a3dchvha" path="res://Sprites/Building/Wall_B_01.png" id="18_4e10w"]
-[ext_resource type="Texture2D" uid="uid://ck6hpfimnrnob" path="res://Sprites/Building/Wide_Door_03.png" id="19_67dir"]
-[ext_resource type="Texture2D" uid="uid://d10s11emgeey" path="res://Sprites/Building/Window_01.png" id="20_oe33g"]
-[ext_resource type="Texture2D" uid="uid://cgeskq1ckxv1g" path="res://Sprites/Building/Roof_B_05.png" id="21_8rbns"]
-[ext_resource type="Texture2D" uid="uid://c2qj7vx3e340g" path="res://Sprites/Building/Roof_B_04.png" id="22_6sckn"]
-[ext_resource type="Texture2D" uid="uid://dcgvw5eckp1yl" path="res://Sprites/Building/Wall_B_03.png" id="23_xev4g"]
-[ext_resource type="Texture2D" uid="uid://c76u4ga2g6gfm" path="res://Sprites/Building/Canopy_02.png" id="24_lkg5e"]
+[ext_resource type="PackedScene" uid="uid://cd8g83exwpt5d" path="res://scene/Enviroment/enviroment.tscn" id="2_ecjv1"]
+[ext_resource type="Texture2D" uid="uid://dk5h7rtywk7b0" path="res://Sprites/Enemies/Duck/Fall (36x36).png" id="3_rvxid"]
 [ext_resource type="Texture2D" uid="uid://cq5h4k1uk6iuw" path="res://Sprites/Character/Herrero/PNG Sequences/Idle Blinking/0_Blacksmith_Idle Blinking_000.png" id="25_lh6x2"]
-[ext_resource type="Texture2D" uid="uid://cpt6e571plsac" path="res://Sprites/Enviroment/Anvil.png" id="25_oicx5"]
-[ext_resource type="Texture2D" uid="uid://b10tw6p7xmdah" path="res://Sprites/Enviroment/Tool_Board.png" id="26_spd6l"]
 [ext_resource type="Texture2D" uid="uid://coc87ssu2ywwf" path="res://Sprites/Character/Herrero/PNG Sequences/Idle Blinking/0_Blacksmith_Idle Blinking_029.png" id="26_uv08g"]
-[ext_resource type="Texture2D" uid="uid://doiwlan61a8rh" path="res://Sprites/Enviroment/Wooden_Crate.png" id="27_u1k3p"]
 
 [node name="ClickerBase" type="Node"]
 script = ExtResource("1_lwccy")
 
-[node name="Enviroment" type="GridContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Enviroment" parent="." instance=ExtResource("2_ecjv1")]
 
-[node name="BG" type="Sprite2D" parent="Enviroment"]
-position = Vector2(360.5, 439)
-scale = Vector2(0.54048, 1.16533)
-texture = ExtResource("2_0lbh7")
-
-[node name="Chimney07" type="Sprite2D" parent="Enviroment"]
-position = Vector2(40, 66)
-texture = ExtResource("16_o1um5")
-
-[node name="Chimney03" type="Sprite2D" parent="Enviroment"]
-position = Vector2(40, 568)
-scale = Vector2(1, 0.859375)
-texture = ExtResource("3_5jn5s")
-
-[node name="Chimney01" type="Sprite2D" parent="Enviroment"]
-position = Vector2(40, 686)
-texture = ExtResource("4_7wagb")
-
-[node name="Chimney04" type="Sprite2D" parent="Enviroment"]
-position = Vector2(40, 449)
-texture = ExtResource("3_5jn5s")
-
-[node name="Chimney05" type="Sprite2D" parent="Enviroment"]
-position = Vector2(40, 321)
-texture = ExtResource("3_5jn5s")
-
-[node name="Chimney06" type="Sprite2D" parent="Enviroment"]
-position = Vector2(40, 193)
-texture = ExtResource("3_5jn5s")
-
-[node name="Ground02" type="Sprite2D" parent="Enviroment"]
-position = Vector2(64, 812)
-texture = ExtResource("4_ea53k")
-
-[node name="Ground03" type="Sprite2D" parent="Enviroment"]
-position = Vector2(192, 812)
-texture = ExtResource("4_ea53k")
-
-[node name="Ground04" type="Sprite2D" parent="Enviroment"]
-position = Vector2(320, 812)
-texture = ExtResource("4_ea53k")
-
-[node name="Ground05" type="Sprite2D" parent="Enviroment"]
-position = Vector2(704, 812)
-texture = ExtResource("4_ea53k")
-
-[node name="Ground06" type="Sprite2D" parent="Enviroment"]
-position = Vector2(576, 812)
-texture = ExtResource("4_ea53k")
-
-[node name="Ground07" type="Sprite2D" parent="Enviroment"]
-position = Vector2(448, 812)
-texture = ExtResource("4_ea53k")
-
-[node name="Ground08" type="Sprite2D" parent="Enviroment"]
-position = Vector2(64, 940)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground09" type="Sprite2D" parent="Enviroment"]
-position = Vector2(64, 1068)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground10" type="Sprite2D" parent="Enviroment"]
-position = Vector2(192, 940)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground11" type="Sprite2D" parent="Enviroment"]
-position = Vector2(192, 1068)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground12" type="Sprite2D" parent="Enviroment"]
-position = Vector2(320, 940)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground13" type="Sprite2D" parent="Enviroment"]
-position = Vector2(320, 1068)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground14" type="Sprite2D" parent="Enviroment"]
-position = Vector2(448, 940)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground33" type="Sprite2D" parent="Enviroment"]
-position = Vector2(352, 1073.5)
-scale = Vector2(0.859375, 0.929688)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground15" type="Sprite2D" parent="Enviroment"]
-position = Vector2(448, 1068)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground16" type="Sprite2D" parent="Enviroment"]
-position = Vector2(576, 940)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground17" type="Sprite2D" parent="Enviroment"]
-position = Vector2(576, 1068)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground18" type="Sprite2D" parent="Enviroment"]
-position = Vector2(704, 940)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground19" type="Sprite2D" parent="Enviroment"]
-position = Vector2(704, 1068)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground20" type="Sprite2D" parent="Enviroment"]
-position = Vector2(64, 1196)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground21" type="Sprite2D" parent="Enviroment"]
-position = Vector2(192, 1196)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground22" type="Sprite2D" parent="Enviroment"]
-position = Vector2(320, 1196)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground23" type="Sprite2D" parent="Enviroment"]
-position = Vector2(448, 1196)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground24" type="Sprite2D" parent="Enviroment"]
-position = Vector2(576, 1196)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground25" type="Sprite2D" parent="Enviroment"]
-position = Vector2(704, 1196)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground26" type="Sprite2D" parent="Enviroment"]
-position = Vector2(64, 1324)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground27" type="Sprite2D" parent="Enviroment"]
-position = Vector2(192, 1324)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground28" type="Sprite2D" parent="Enviroment"]
-position = Vector2(320, 1324)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground29" type="Sprite2D" parent="Enviroment"]
-position = Vector2(448, 1324)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground30" type="Sprite2D" parent="Enviroment"]
-position = Vector2(576, 1324)
-texture = ExtResource("8_bwnr8")
-
-[node name="Ground31" type="Sprite2D" parent="Enviroment"]
-position = Vector2(704, 1324)
-texture = ExtResource("8_bwnr8")
-
-[node name="Rock02" type="Sprite2D" parent="Enviroment"]
-position = Vector2(44, 841)
-scale = Vector2(0.484375, 0.484375)
-texture = ExtResource("9_vaa1s")
-
-[node name="Rock04" type="Sprite2D" parent="Enviroment"]
-position = Vector2(254, 850)
-scale = Vector2(0.640625, 0.640625)
-texture = ExtResource("10_ubac2")
-
-[node name="Rock06" type="Sprite2D" parent="Enviroment"]
-position = Vector2(409, 818)
-texture = ExtResource("11_her0y")
-
-[node name="Rock08" type="Sprite2D" parent="Enviroment"]
-position = Vector2(696, 847)
-texture = ExtResource("12_ojpmn")
-
-[node name="Rock01" type="Sprite2D" parent="Enviroment"]
-position = Vector2(591, 838)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("13_rmkro")
-
-[node name="WallB02" type="Sprite2D" parent="Enviroment"]
-position = Vector2(291, 589)
-texture = ExtResource("17_n8b6p")
-
-[node name="WallB03" type="Sprite2D" parent="Enviroment"]
-position = Vector2(511.748, 589)
-scale = Vector2(0.829673, 0.99375)
-texture = ExtResource("17_n8b6p")
-
-[node name="WallB01" type="Sprite2D" parent="Enviroment"]
-position = Vector2(69, 590)
-texture = ExtResource("18_4e10w")
-
-[node name="WideDoor03" type="Sprite2D" parent="Enviroment"]
-position = Vector2(490, 624)
-texture = ExtResource("19_67dir")
-
-[node name="Window01" type="Sprite2D" parent="Enviroment"]
-position = Vector2(288, 553)
-texture = ExtResource("20_oe33g")
-
-[node name="RoofB05" type="Sprite2D" parent="Enviroment"]
-position = Vector2(209, 373)
-texture = ExtResource("21_8rbns")
-
-[node name="RoofB04" type="Sprite2D" parent="Enviroment"]
-position = Vector2(560, 372)
-texture = ExtResource("22_6sckn")
-
-[node name="WallB04" type="Sprite2D" parent="Enviroment"]
-position = Vector2(708, 590)
-texture = ExtResource("23_xev4g")
-
-[node name="Canopy02" type="Sprite2D" parent="Enviroment"]
-position = Vector2(489.5, 525)
-scale = Vector2(1.05859, 1.10938)
-texture = ExtResource("24_lkg5e")
-
-[node name="Anvil" type="Sprite2D" parent="Enviroment"]
-position = Vector2(174, 684)
-scale = Vector2(0.492188, 0.492188)
-texture = ExtResource("25_oicx5")
-
-[node name="ToolBoard" type="Sprite2D" parent="Enviroment"]
-position = Vector2(156, 583)
-scale = Vector2(0.375, 0.375)
-texture = ExtResource("26_spd6l")
-
-[node name="WoodenCrate" type="Sprite2D" parent="Enviroment"]
-position = Vector2(683, 689)
-texture = ExtResource("27_u1k3p")
-
-[node name="WoodenCrate2" type="Sprite2D" parent="Enviroment"]
-position = Vector2(716, 574)
-texture = ExtResource("27_u1k3p")
-
-[node name="UI" type="CanvasLayer" parent="."]
-layer = -5
-
-[node name="TextureButton" type="TextureButton" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -189.0
-offset_top = -776.0
-offset_right = 81.0
-offset_bottom = -506.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_stretch_ratio = 0.0
-action_mode = 0
-texture_normal = ExtResource("25_lh6x2")
-texture_pressed = ExtResource("26_uv08g")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="Timer" type="Timer" parent="."]
+autostart = true
 
 [node name="LabelClick" type="Label" parent="."]
 offset_left = 64.0
@@ -310,9 +34,6 @@ text = "(ClickPerSecond)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Timer" type="Timer" parent="."]
-autostart = true
-
 [node name="Mejora_X_Click" type="Button" parent="."]
 offset_left = 511.0
 offset_top = 784.0
@@ -320,7 +41,7 @@ offset_right = 704.0
 offset_bottom = 828.0
 text = "Mejora  +1 x click
 "
-icon = ExtResource("6_dkelm")
+icon = ExtResource("3_rvxid")
 
 [node name="CostXclick" type="Label" parent="."]
 offset_left = 512.0
@@ -362,8 +83,24 @@ offset_bottom = 1040.0
 text = "(costo mejora)"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="TextureButton" type="TextureButton" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -189.0
+offset_top = -776.0
+offset_right = 81.0
+offset_bottom = -506.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_stretch_ratio = 0.0
+action_mode = 0
+texture_normal = ExtResource("25_lh6x2")
+texture_pressed = ExtResource("26_uv08g")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Mejora_X_Click" to="." method="_on_mejora_x_click_pressed"]
-[connection signal="pressed" from="Mejora 1" to="." method="_on_mejora_1_pressed"]
-[connection signal="pressed" from="Mejora 2" to="." method="_on_mejora_2_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
